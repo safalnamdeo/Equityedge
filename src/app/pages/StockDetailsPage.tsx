@@ -137,19 +137,22 @@ export function StockDetailsPage() {
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={400}>
-            <LineChart data={priceHistory}>
-              <CartesianGrid strokeDasharray="3 3" className="stroke-border" />
+            <LineChart data={priceHistory} margin={{ top: 5, right: 5, bottom: 5, left: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" className="stroke-border" key="grid-stock-detail" />
               <XAxis
                 dataKey="date"
                 className="text-xs"
                 tick={{ fill: 'hsl(var(--muted-foreground))' }}
+                key="xaxis-stock-detail"
               />
               <YAxis
                 className="text-xs"
                 tick={{ fill: 'hsl(var(--muted-foreground))' }}
                 domain={['dataMin - 5', 'dataMax + 5']}
+                key="yaxis-stock-detail"
               />
               <Tooltip
+                key="tooltip-stock-detail"
                 contentStyle={{
                   backgroundColor: 'hsl(var(--card))',
                   border: '1px solid hsl(var(--border))',
@@ -158,12 +161,14 @@ export function StockDetailsPage() {
                 formatter={(value: number) => [`$${value.toFixed(2)}`, 'Price']}
               />
               <Line
-                key="stock-price"
+                key="line-stock-detail"
                 type="monotone"
                 dataKey="price"
                 stroke={stock.change >= 0 ? '#16A34A' : '#DC2626'}
                 strokeWidth={2}
                 dot={false}
+                name="Stock Price"
+                isAnimationActive={false}
               />
             </LineChart>
           </ResponsiveContainer>

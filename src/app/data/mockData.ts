@@ -386,18 +386,18 @@ export const transactions: Transaction[] = [
 
 // Portfolio performance data (for charts)
 export const portfolioPerformanceData = [
-  { date: "Jan", value: 45000 },
-  { date: "Feb", value: 47500 },
-  { date: "Mar", value: 46800 },
-  { date: "Apr", value: 49200 },
-  { date: "May", value: 51000 },
-  { date: "Jun", value: 48500 },
-  { date: "Jul", value: 52300 },
-  { date: "Aug", value: 54800 },
-  { date: "Sep", value: 53200 },
-  { date: "Oct", value: 56500 },
-  { date: "Nov", value: 58900 },
-  { date: "Dec", value: 61250 },
+  { id: "perf-1", date: "Jan", value: 45000 },
+  { id: "perf-2", date: "Feb", value: 47500 },
+  { id: "perf-3", date: "Mar", value: 46800 },
+  { id: "perf-4", date: "Apr", value: 49200 },
+  { id: "perf-5", date: "May", value: 51000 },
+  { id: "perf-6", date: "Jun", value: 48500 },
+  { id: "perf-7", date: "Jul", value: 52300 },
+  { id: "perf-8", date: "Aug", value: 54800 },
+  { id: "perf-9", date: "Sep", value: 53200 },
+  { id: "perf-10", date: "Oct", value: 56500 },
+  { id: "perf-11", date: "Nov", value: 58900 },
+  { id: "perf-12", date: "Dec", value: 61250 },
 ];
 
 // Stock price history (for detail charts)
